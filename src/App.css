@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 15vmin;
+  min-height: 2.1em;
+  pointer-events: none;
+}
+
+.yn-primary-text {
+  color: #EBB233;
+}
+
+.yn-primary-border {
+  border: 1px solid #EBB233;
+};
+
+.yn-primary-background {
+  background-color: #EBB233;
+}
+
+.yn-secondary-background {
+  background-color: #171717;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 3vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

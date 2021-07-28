@@ -1,14 +1,11 @@
 // Absolute Imports
 import React, { useEffect, useContext } from "react";
 import { observer } from "mobx-react-lite";
-import { Button, makeStyles, TextField } from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
 import { useHistory } from "react-router";
 
 // Store
 import { RootContext } from "../stores/RootStore";
-
-// Components
-import BackgroundGrid from "../components/BackgroundGrid";
 
 // Styles
 import YNMui from '../styles/YNMui';
@@ -27,6 +24,7 @@ const Entry = observer((props) => {
 
   useEffect(() => {
     entriesStore.getYamGiveawayData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

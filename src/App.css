@@ -8,8 +8,22 @@
   pointer-events: none;
 }
 
+.Small-logo {
+  height: 5vmin;
+  min-height: .5em;
+  pointer-events: none;
+}
+
 .yn-primary-text {
   color: #EBB233;
+}
+
+.yn-success-text {
+  color: #50EB33
+}
+
+.yn-danger-text {
+  color: #EB3333
 }
 
 .yn-primary-border {
@@ -22,6 +36,18 @@
 
 .yn-secondary-background {
   background-color: #171717;
+}
+
+.sub-text {
+  font-size: calc(5px + 1vmin);
+}
+
+.sub-title {
+  font-size: calc(25px + 4vmin);
+}
+
+.sub-title-2 {
+  font-size: calc(15px + 2vmin);
 }
 
 .App-header {

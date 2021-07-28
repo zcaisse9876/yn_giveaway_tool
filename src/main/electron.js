@@ -2,18 +2,23 @@ const path = require('path');
 
 const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
+const IPCReceiver = require('./IPCReceiver');
 
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    minWidth: 400,
-    minHeight: 300,
+    minWidth: 600,
+    minHeight: 450,
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      preload: __dirname + "/preload.js",
+      contextIsolation: false,
     },
   });
+
+  console.log(__dirname);
 
   // and load the index.html of the app.
   // win.loadFile("index.html");
@@ -24,8 +29,10 @@ function createWindow() {
   );
   // Open the DevTools.
   if (isDev) {
-    win.webContents.openDevTools({ mode: 'detach' });
+    win.webContents.openDevTools({ mode: 'right' });
   }
+
+  const ipcReceiver = new IPCReceiver(win);
 }
 
 // This method will be called when Electron has finished
